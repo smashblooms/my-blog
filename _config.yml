@@ -13,8 +13,6 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
-permalink: /posts/:name.html
-
 # Collections (メモ機能用)
 collections:
   tech_memos:
@@ -23,14 +21,15 @@ collections:
   daily_memos:
     output: true
     permalink: /daily-memos/:path/
+  tech_articles:
+    output: true
+    permalink: /tech/:name.html
+  daily_articles:
+    output: true
+    permalink: /daily/:name.html
 
 # Defaults for posts and collections
 defaults:
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
   - scope:
       path: ""
       type: "tech_memos"
@@ -41,3 +40,13 @@ defaults:
       type: "daily_memos"
     values:
       layout: "memo"
+  - scope:
+      path: ""
+      type: "tech_articles"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "daily_articles"
+    values:
+      layout: "post"

@@ -7,10 +7,10 @@ title: ホーム
 
 <hr>
 
-<h2>最新の記事</h2>
-{% if site.posts.size > 0 %}
+<h2>最新の技術記事</h2>
+{% if site.tech_articles.size > 0 %}
   <ul>
-    {% for post in site.posts limit:5 %}
+    {% for post in site.tech_articles limit:5 %}
       <li>
         <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
         <p><small>公開日: {{ post.date | date: "%Y年%m月%d日" }}</small></p>
@@ -19,5 +19,22 @@ title: ホーム
     {% endfor %}
   </ul>
 {% else %}
-  <p>まだ投稿がありません。</p>
+  <p>まだ技術記事がありません。</p>
+{% endif %}
+
+<hr>
+
+<h2>最新の日常記事</h2>
+{% if site.daily_articles.size > 0 %}
+  <ul>
+    {% for post in site.daily_articles limit:5 %}
+      <li>
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        <p><small>公開日: {{ post.date | date: "%Y年%m月%d日" }}</small></p>
+        {{ post.excerpt }}
+      </li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p>まだ日常記事がありません。</p>
 {% endif %}

@@ -1,0 +1,21 @@
+---
+layout: default
+title: 日常記事一覧
+---
+<h1>日常記事</h1>
+
+{% if site.daily_articles.size > 0 %}
+  <ul>
+    {% for article in site.daily_articles %}
+      <li>
+        <h3><a href="{{ article.url | relative_url }}">{{ article.title }}</a></h3>
+        {% if article.date %}
+          <p><small>公開日: {{ article.date | date: "%Y年%m月%d日" }}</small></p>
+        {% endif %}
+        {{ article.excerpt }}
+      </li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p>まだ日常記事はありません。</p>
+{% endif %}
