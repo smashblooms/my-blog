@@ -2,7 +2,7 @@ title: あなたの新しいブログタイトル
 email: あなたのメールアドレス
 description: >-
   ここにブログの簡単な説明を記述します。
-baseurl: "" # GitHub Pagesで <username>.github.io/<repositoryname> の場合、"/repositoryname"
+baseurl: "/my-blog" # GitHub Pagesで <username>.github.io/<repositoryname> の場合、"/repositoryname"
 url: "smashblooms" # 公開サイトのURL (例: https://username.github.io)
 github_username: smashblooms
 
