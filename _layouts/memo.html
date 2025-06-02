@@ -1,0 +1,26 @@
+---
+layout: default
+---
+<article class="memo">
+  <header class="memo-header">
+    <h1 class="memo-title">{{ page.title | escape }}</h1>
+    {% if page.date %}
+      <p class="memo-meta">
+        <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y年%m月%d日" }}</time>
+      </p>
+    {% endif %}
+  </header>
+
+  <div class="memo-content">
+    {{ content }}
+  </div>
+
+  {% if page.tags.size > 0 %}
+    <div class="memo-tags">
+      タグ:
+      {% for tag in page.tags %}
+        <a href="{{ site.baseurl }}/tags/#{{ tag | slugify }}">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}
+      {% endfor %}
+    </div>
+  {% endif %}
+</article>

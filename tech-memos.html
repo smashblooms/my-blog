@@ -1,0 +1,21 @@
+---
+layout: default
+title: 技術メモ一覧
+---
+<h1>技術メモ</h1>
+
+{% if site.tech_memos.size > 0 %}
+  <ul>
+    {% for memo in site.tech_memos %}
+      <li>
+        <h3><a href="{{ memo.url | relative_url }}">{{ memo.title }}</a></h3>
+        {% if memo.date %}
+          <p><small>更新日: {{ memo.date | date: "%Y年%m月%d日" }}</small></p>
+        {% endif %}
+        {{ memo.excerpt }}
+      </li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p>まだ技術メモはありません。</p>
+{% endif %}

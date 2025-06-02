@@ -13,6 +13,8 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
+permalink: /posts/:name.html
+
 # Collections (メモ機能用)
 collections:
   tech_memos:
