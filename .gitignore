@@ -1,0 +1,14 @@
+# Jekyll
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+*.jekyll-cache
+
+# Gem
+vendor/bundle/
+# Gemfile.lock # Gemfile.lockを含めることで依存関係を固定できますが、GitHub Pagesのビルドと差異が出る場合も考慮。含める場合はコメントアウトを外す。
+
+# OS generated files
+.DS_Store
+Thumbs.db

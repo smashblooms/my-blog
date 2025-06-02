@@ -1,0 +1,41 @@
+title: あなたの新しいブログタイトル
+email: あなたのメールアドレス
+description: >-
+  ここにブログの簡単な説明を記述します。
+baseurl: "" # GitHub Pagesで <username>.github.io/<repositoryname> の場合、"/repositoryname"
+url: "smashblooms" # 公開サイトのURL (例: https://username.github.io)
+github_username: smashblooms
+
+# Build settings
+# theme: minima # Gemfileでテーマを指定した場合、または独自デザインの場合は不要なことも
+
+plugins:
+  - jekyll-feed
+  # - jekyll-seo-tag # Gemfileで追加した場合
+
+# Collections (メモ機能用)
+collections:
+  tech_memos:
+    output: true
+    permalink: /tech-memos/:path/
+  daily_memos:
+    output: true
+    permalink: /daily-memos/:path/
+
+# Defaults for posts and collections
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "tech_memos"
+    values:
+      layout: "memo"
+  - scope:
+      path: ""
+      type: "daily_memos"
+    values:
+      layout: "memo"
