@@ -17,10 +17,10 @@ plugins:
 collections:
   tech_memos:
     output: true
-    permalink: /tech-memos/:path/
+    permalink: /tech-memos/:name.html
   daily_memos:
     output: true
-    permalink: /daily-memos/:path/
+    permalink: /daily-memos/:name.html
   tech_articles:
     output: true
     permalink: /tech/:name.html
