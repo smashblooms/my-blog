@@ -5,13 +5,19 @@ title: ホーム
 <h1>{{ site.title }} へようこそ！</h1>
 <p>{{ site.description }}</p>
 
+<hr>
+
 <h2>最新の記事</h2>
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-      <p>{{ post.excerpt }}</p>
-      <p><small>公開日: {{ post.date | date: "%Y年%m月%d日" }}</small></p>
-    </li>
-  {% endfor %}
-</ul>
+{% if site.posts.size > 0 %}
+  <ul>
+    {% for post in site.posts limit:5 %} {# 最新5件を表示する例 #}
+      <li>
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        <p><small>公開日: {{ post.date | date: "%Y年%m月%d日" }}</small></p>
+        {{ post.excerpt }} {# 記事の最初の段落などを抜粋として表示 #}
+      </li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p>まだ投稿がありません。</p>
+{% endif %}
