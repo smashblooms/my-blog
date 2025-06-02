@@ -1,7 +1,6 @@
 # なんでもブログ
 
-###
-[URL](https://smashblooms.github.io/my-blog/)
+URL: [https://smashblooms.github.io/my-blog/](https://smashblooms.github.io/my-blog/)
 
 ## 環境構築, 記事・メモ投稿ガイド
 
