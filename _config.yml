@@ -3,7 +3,7 @@ email: emf0000b@gmail.com
 description: >-
   ここにブログの簡単な説明を記述します。
 baseurl: "/my-blog" # GitHub Pagesで <username>.github.io/<repositoryname> の場合、"/repositoryname"
-url: "smashblooms" # 公開サイトのURL (例: https://username.github.io)
+url: "https://smashblooms.github.io" # 公開サイトのURL (例: https://username.github.io)
 github_username: smashblooms
 
 # Build settings
