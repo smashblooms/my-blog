@@ -2,11 +2,11 @@
 layout: default
 title: 日常メモ一覧
 ---
-<h1>技術メモ</h1>
+<h1>日常メモ</h1>
 
-{% if site.tech_memos.size > 0 %}
+{% if site.daily_memos.size > 0 %}
   <ul>
-    {% for memo in site.tech_memos %}
+    {% for memo in site.daily_memos %}
       <li>
         <h3><a href="{{ memo.url | relative_url }}">{{ memo.title }}</a></h3>
         {% if memo.date %}
@@ -17,5 +17,5 @@ title: 日常メモ一覧
     {% endfor %}
   </ul>
 {% else %}
-  <p>まだ技術メモはありません。</p>
+  <p>まだ日常メモはありません。</p>
 {% endif %}
