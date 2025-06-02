@@ -10,11 +10,11 @@ title: ホーム
 <h2>最新の記事</h2>
 {% if site.posts.size > 0 %}
   <ul>
-    {% for post in site.posts limit:5 %} {# 最新5件を表示する例 #}
+    {% for post in site.posts limit:5 %}
       <li>
         <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
         <p><small>公開日: {{ post.date | date: "%Y年%m月%d日" }}</small></p>
-        {{ post.excerpt }} {# 記事の最初の段落などを抜粋として表示 #}
+        {{ post.excerpt }}
       </li>
     {% endfor %}
   </ul>

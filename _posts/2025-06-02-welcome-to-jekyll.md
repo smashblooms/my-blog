@@ -1,13 +1,12 @@
 ---
 layout: post
-title: "Jekyllへようこそ！"
+title: "投稿のテスト"
 date: 2025-06-02 22:10:00 +0900 # 現在時刻の例
 categories: [Jekyll, ブログ]
 tags: [入門, セットアップ]
 ---
 
-これはJekyllで作成したブログの最初の記事です。
-ここからあなたのブログが始まります！
+テスト投稿です。表示されていれば成功です。
 
 ## Markdownで書けます
 
@@ -20,3 +19,4 @@ Markdownを使えば、簡単に見出しやリスト、コードブロックな
 ```python
 def hello():
   print("Hello, Jekyll!")
+```
