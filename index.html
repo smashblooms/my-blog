@@ -2,16 +2,16 @@
 layout: default
 title: ホーム
 ---
-
 <h1>{{ site.title }} へようこそ！</h1>
 <p>{{ site.description }}</p>
 
 <h2>最新の記事</h2>
 <ul>
-  {% for post in site.posts limit:5 %}
+  {% for post in site.posts %}
     <li>
-      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-      <span>({{ post.date | date: "%Y年%m月%d日" }})</span>
+      <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+      <p>{{ post.excerpt }}</p>
+      <p><small>公開日: {{ post.date | date: "%Y年%m月%d日" }}</small></p>
     </li>
   {% endfor %}
 </ul>
