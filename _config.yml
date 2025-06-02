@@ -11,7 +11,7 @@ github_username: smashblooms
 
 plugins:
   - jekyll-feed
-  # - jekyll-seo-tag # Gemfileで追加した場合
+  - jekyll-seo-tag
 
 # Collections (メモ機能用)
 collections:

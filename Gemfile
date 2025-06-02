@@ -8,5 +8,5 @@ gem "jekyll", "~> 4.3" # GitHub Pagesでサポートされている最新バー�
 
 # (オプション) GitHub Pagesで推奨されるプラグイン
 gem "jekyll-feed", "~> 0.17.0"
-# gem "jekyll-seo-tag", "~> 2.8.0" # 必要ならコメントアウトを外す
+gem "jekyll-seo-tag", "~> 2.8.0"
 # 他に必要なプラグインがあればここに追加
